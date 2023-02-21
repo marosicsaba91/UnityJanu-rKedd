@@ -17,7 +17,7 @@ class Follower : MonoBehaviour
         if (distance <= bigRange)
         {
             float t = Mathf.InverseLerp(bigRange, smallRange, distance);
-            float actualSpeed = Mathf.Lerp(0,speed,t);
+            float actualSpeed = Mathf.Lerp(0,speed,t);   // Ezt a sort lehet-e egyszerûbben?
 
             transform.position = Vector3.MoveTowards(selfPosition, targetPosition, actualSpeed * Time.deltaTime);
         }

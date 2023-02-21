@@ -591,7 +591,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 210109619}
   speed: 5
-  range: 10
+  bigRange: 11.86
+  smallRange: 13.2
 --- !u!114 &445213045
 MonoBehaviour:
   m_ObjectHideFlags: 0
