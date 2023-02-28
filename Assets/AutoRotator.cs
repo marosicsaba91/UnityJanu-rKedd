@@ -34,5 +34,8 @@ class AutoRotator : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(a, b);
+
+
+
     }
 }

@@ -8,8 +8,19 @@ class Mover : MonoBehaviour
     [SerializeField] bool moveInCameraSpace = true;
     [SerializeField] float angularVelocity = 180;
 
+    [SerializeField] HealthObject healthObject;
+
+    void OnValidate()
+    {
+        if (healthObject == null)
+            healthObject = GetComponent<HealthObject>();
+    }
+
     void Update()
     {
+        if (healthObject != null && !healthObject.IsAlive()) 
+            return;
+
         bool up = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
         bool down = Input.GetKey(KeyCode.DownArrow);
         bool right = Input.GetKey(KeyCode.RightArrow);
